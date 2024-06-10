@@ -19,3 +19,9 @@ Projet pour voir MySQL/MariaDB
 9. Faire une requête pour récupérer les pesronnes dont le first name commence par un L (il faudra utiliser le LIKE pour ça, je vous laisse chercher la doc)
 10. Utiliser le CONCAT dans un SELECT pour afficher une colonne full_name qui sera une concaténation du first_name et du name (pareil, je vous laisse chercher la doc)
 **Bonus (plus compliqué)** Récupérer les personnes qui n'étaient pas nées en 1995 (et que la requête marche même si on est pas en 2024)
+
+#### Order et Limit
+1. En utilisant le ORDER BY récupérer les personnes ordonnées par leur name de A à Z
+2. En utilisant le ORDER BY toujours, récupérer les personnes de la plus jeune à la moins jeune
+3. En utilisant le LIMIT en plus du ORDER BY, afficher les 3 personnes les plus agées
+4. En utilisant le ORDER BY aller chercher les personnes avec le first_name de A à Z en premier et de la plus agée à la moins agée en deuxième (même requête, même order by, 2 critères)
