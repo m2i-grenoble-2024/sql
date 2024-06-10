@@ -25,3 +25,9 @@ SELECT CONCAT(first_name,' ', name) AS full_name FROM person;
 SELECT * FROM person WHERE CONCAT(first_name,name) LIKE '%as%';
 
 SELECT * FROM person WHERE YEAR(NOW())-age > 1995;
+
+
+SELECT * FROM person ORDER BY name ASC;
+SELECT * FROM person ORDER BY age ASC;
+SELECT * FROM person ORDER BY age DESC LIMIT 3;
+SELECT * FROM person ORDER BY first_name ASC, age DESC;
