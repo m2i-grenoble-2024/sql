@@ -25,5 +25,14 @@ INSERT INTO nom_table (col1,col2,col3) VALUES ('valeur1', 10, 'valeur 3');
 -- Dans le cas de notre table person, ça nous donne
 INSERT INTO person (name, first_name, age) VALUES ("Richter", 'Franky', 65);
 
+
+SELECT * FROM ma_table;
+
+
+SELECT * FROM person;
+SELECT first_name,age FROM person;
+SELECT * FROM person WHERE name='Richter';
+
+
 -- Afficher les colonnes d'une table
 DESC person;
