@@ -12,9 +12,18 @@ SHOW TABLES;
 
 DROP TABLE IF EXISTS person;
 CREATE TABLE person (
-    id INT PRIMARY KEY AUTO_INCREMENT, -- je sais pas
-    name VARCHAR(128) NOT NULL
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(128) NOT NULL,
+    first_name VARCHAR(128) NOT NULL,
+    age INT
 );
+
+-- CRUD : Create Read Update Delete
+-- Create : la requête permettant d'ajouter une valeur dans une table, on y indique le nom de la table, la liste des colonnes à spécifier suivie des valeurs à assigner à chaque colonne, dans le même ordre
+INSERT INTO nom_table (col1,col2,col3) VALUES ('valeur1', 10, 'valeur 3');
+
+-- Dans le cas de notre table person, ça nous donne
+INSERT INTO person (name, first_name, age) VALUES ("Richter", 'Franky', 65);
 
 -- Afficher les colonnes d'une table
 DESC person;
