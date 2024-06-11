@@ -33,3 +33,5 @@ Projet pour voir MySQL/MariaDB
 3. Faire une requête pour récupérer les addresses qui appartiennent à la famille Sakhri
 4. Faire une requête pour récupérer les addresses qui appartiennent aux personnes avec le prénom Lisa et situées dans le 38
 5. Faire une requête qui récupère les persons de la plus âgée à la moins âgée qui ont une address dans une rue (plutôt qu'une avenue ou un boulevard, un chemin etc.)
+6. Faire une requête pour récupérer les persons qui n'ont pas d'address
+**Bonus**: Faire une requête de recherche qui va sortir toutes les personnes qui ont le terme `on` n'importe où dans leur nom/prénom/addresse

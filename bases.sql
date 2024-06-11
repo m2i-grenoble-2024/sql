@@ -47,3 +47,8 @@ UPDATE person SET name='Jacquot',age=45 WHERE id=1;
 
 -- Delete
 DELETE FROM person WHERE id=2;
+
+
+-- Exemple de requête avec jointure où on va chercher toutes les peronnes et leur
+-- adresses pour celles qui en ont.
+SELECT * FROM person LEFT JOIN address ON person.id=address.person_id;
