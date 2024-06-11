@@ -56,3 +56,11 @@ INSERT INTO skill (label) VALUES
 ('JS'),
 ('MySQL'),
 ('Git');
+
+INSERT INTO person_skill (person_id,skill_id) VALUES 
+(1,2),
+(1,3),
+(1,5),
+(2,1),
+(2,4),
+(3,5);
