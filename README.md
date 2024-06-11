@@ -25,3 +25,11 @@ Projet pour voir MySQL/MariaDB
 2. En utilisant le ORDER BY toujours, récupérer les personnes de la plus jeune à la moins jeune
 3. En utilisant le LIMIT en plus du ORDER BY, afficher les 3 personnes les plus agées
 4. En utilisant le ORDER BY aller chercher les personnes avec le first_name de A à Z en premier et de la plus agée à la moins agée en deuxième (même requête, même order by, 2 critères)
+
+
+#### Select Jointure
+1. Faire une requête qui va récupérer toutes les addresses de la person 5
+2. Faire une requête pour récupérer le name des persons qui possèdent une address à Grenoble
+3. Faire une requête pour récupérer les addresses qui appartiennent à la famille Sakhri
+4. Faire une requête pour récupérer les addresses qui appartiennent aux personnes avec le prénom Lisa et situées dans le 38
+5. Faire une requête qui récupère les persons de la plus âgée à la moins âgée qui ont une address dans une rue (plutôt qu'une avenue ou un boulevard, un chemin etc.)

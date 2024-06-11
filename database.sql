@@ -33,4 +33,4 @@ INSERT INTO address (street, city, zip_code, person_id) VALUES
 ('rue de la république', 'Grenoble', '38000', 5),
 ('rue de la santé', 'Lyon', '69000', 5),
 ('rue de vide', 'Lyon', '69000', NULL),
-('rue de la gare', 'Nantes', '44000', 5);
+('avenue de la gare', 'Nantes', '44000', 5);
