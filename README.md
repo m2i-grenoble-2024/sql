@@ -26,7 +26,7 @@ Projet pour voir MySQL/MariaDB
 3. En utilisant le LIMIT en plus du ORDER BY, afficher les 3 personnes les plus agées
 4. En utilisant le ORDER BY aller chercher les personnes avec le first_name de A à Z en premier et de la plus agée à la moins agée en deuxième (même requête, même order by, 2 critères)
 
-
+### Relations entre tables
 #### Select Jointure
 1. Faire une requête qui va récupérer toutes les addresses de la person 5
 2. Faire une requête pour récupérer le name des persons qui possèdent une address à Grenoble
@@ -35,3 +35,12 @@ Projet pour voir MySQL/MariaDB
 5. Faire une requête qui récupère les persons de la plus âgée à la moins âgée qui ont une address dans une rue (plutôt qu'une avenue ou un boulevard, un chemin etc.)
 6. Faire une requête pour récupérer les persons qui n'ont pas d'address
 **Bonus**: Faire une requête de recherche qui va sortir toutes les personnes qui ont le terme `on` n'importe où dans leur nom/prénom/addresse
+
+#### Table de jointure
+1. Dans le database.sql, créer une nouvelle table skill qui aura un id comme d'hab et une colonne label en varchar not null
+2. Créer également une table de jointure person_skill (qui se create comme une table classique en vrai) qui aura 2 colonnes : un person_id et un skill_id
+3. Déclarer ces deux colonnes en foreign key vers les 2 tables person et skill
+4. Déclarer également une clé primaire composite en rajoutant cette ligne dans le CREATE TABLE à la fin : PRIMARY KEY (person_id,skill_id)
+5. Faire des INSERT INTO skill pour rajouter les skills 'HTML/CSS', 'JS', 'Git', 'PHP', 'MySQL', puis des INSERT INTO person_skill pour assigner différents skills à différentes personnes
+
+#### Req
