@@ -43,4 +43,8 @@ Projet pour voir MySQL/MariaDB
 4. Déclarer également une clé primaire composite en rajoutant cette ligne dans le CREATE TABLE à la fin : PRIMARY KEY (person_id,skill_id)
 5. Faire des INSERT INTO skill pour rajouter les skills 'HTML/CSS', 'JS', 'Git', 'PHP', 'MySQL', puis des INSERT INTO person_skill pour assigner différents skills à différentes personnes
 
-#### Req
+#### Requête multi jointure
+1. Faire une requête pour afficher les persons qui ont comme skill 'PHP' (il va donc falloir faire 2 LEFT JOIN, avec 2 ON pour récupérer 3 tables en même temps : person -> person_skill -> skill. Et un p'tit where à la fin)
+2. (désolé) Faire une requête qui va afficher les persons qui savent faire du Git et qui ont une address à Grenoble (on va donc avoir 3 LEFT JOIN, pasque pourquoi pas)
+3. En se basant sur la requête d'avant, afficher les labels des skills connus des persons qui ont une address à grenoble (distinct ?)
+

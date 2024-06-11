@@ -56,3 +56,17 @@ SELECT person.name FROM person LEFT JOIN address ON person.id=address.person_id
 
 SELECT person.* FROM person LEFT JOIN address ON person.id=address.person_id 
  WHERE CONCAT(person.name, person.first_name, address.street, address.city) LIKE '%on%';
+
+
+SELECT person.* FROM person
+LEFT JOIN person_skill ON person.id=person_skill.person_id
+LEFT JOIN skill ON skill.id=person_skill.skill_id
+WHERE skill.label='PHP';
+
+
+
+SELECT * FROM person
+LEFT JOIN person_skill ON person.id=person_skill.person_id
+LEFT JOIN skill ON skill.id=person_skill.skill_id
+LEFT JOIN address ON person.id=address.person_id
+WHERE skill.label='Git' AND address.city='Grenoble';
