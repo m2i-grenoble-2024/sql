@@ -24,3 +24,12 @@ INSERT INTO person (name,first_name,age) VALUES
 ('Johnson', 'Alberto', 65),
 ('Mouriel', 'Baptiste', 18);
 
+INSERT INTO address (street, city, zip_code, person_id) VALUES 
+('rue de la république', 'Grenoble', '38000', 1),
+('rue de la santé', 'Lyon', '69000', 1),
+('rue de la gare', 'Nantes', '44000', 2),
+('rue de la paix', 'Nantes', '44000', 3),
+('Avenue truc truc', 'Grenoble', '38000', 3),
+('rue de la république', 'Grenoble', '38000', 5),
+('rue de la santé', 'Lyon', '69000', 5),
+('rue de la gare', 'Nantes', '44000', 5);
