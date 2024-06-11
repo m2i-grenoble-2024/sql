@@ -31,3 +31,7 @@ SELECT * FROM person ORDER BY name ASC;
 SELECT * FROM person ORDER BY age ASC;
 SELECT * FROM person ORDER BY age DESC LIMIT 3;
 SELECT * FROM person ORDER BY first_name ASC, age DESC;
+
+-- Exemple de requête avec jointure où on va chercher toutes les peronnes et leur
+-- adresses pour celles qui en ont.
+SELECT * FROM person LEFT JOIN address ON person.id=address.person_id;

@@ -11,7 +11,7 @@ CREATE TABLE address(
     street VARCHAR(255),
     city VARCHAR(255),
     zip_code VARCHAR(20),
-    person_id INT NOT NULL REFERENCES person(id)
+    person_id INT REFERENCES person(id)
     -- FOREIGN KEY person_id REFERENCES person(id) -- On peut aussi déclarer la FK à part
 );
 
@@ -32,4 +32,5 @@ INSERT INTO address (street, city, zip_code, person_id) VALUES
 ('Avenue truc truc', 'Grenoble', '38000', 3),
 ('rue de la république', 'Grenoble', '38000', 5),
 ('rue de la santé', 'Lyon', '69000', 5),
+('rue de vide', 'Lyon', '69000', NULL),
 ('rue de la gare', 'Nantes', '44000', 5);
