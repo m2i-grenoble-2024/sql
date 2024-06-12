@@ -36,6 +36,7 @@ SELECT * FROM person ORDER BY first_name ASC, age DESC;
 
 SELECT * FROM address WHERE person_id=5;
 
+-- Faire un commentaire
 SELECT person.name FROM person LEFT JOIN address ON person.id=address.person_id
  WHERE address.city='Grenoble';
 
@@ -70,3 +71,10 @@ LEFT JOIN person_skill ON person.id=person_skill.person_id
 LEFT JOIN skill ON skill.id=person_skill.skill_id
 LEFT JOIN address ON person.id=address.person_id
 WHERE skill.label='Git' AND address.city='Grenoble';
+
+-- commentaire
+SELECT DISTINCT skill.label FROM person
+INNER JOIN person_skill ON person.id=person_skill.person_id
+LEFT JOIN skill ON skill.id=person_skill.skill_id
+LEFT JOIN address ON person.id=address.person_id
+WHERE address.city='Grenoble';

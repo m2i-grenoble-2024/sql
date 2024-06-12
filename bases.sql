@@ -52,3 +52,10 @@ DELETE FROM person WHERE id=2;
 -- Exemple de requête avec jointure où on va chercher toutes les peronnes et leur
 -- adresses pour celles qui en ont.
 SELECT * FROM person LEFT JOIN address ON person.id=address.person_id;
+
+-- Group by permet d'aggréger (de regrouper) des valeurs ensemble en se basant 
+-- sur une colonne puis d'appliquer des fonctions d'aggrégation sur les résultats.
+-- Ici on regroupe les personnes par leur nom et on demande d'afficher les noms en
+-- question et de compter combien de ligne contient l'aggrégat pour chaque nom 
+-- (donc en gros combien de personnes ont le même nom dans la table personne)
+SELECT name, COUNT(*) AS nb_of_person FROM person GROUP BY name;

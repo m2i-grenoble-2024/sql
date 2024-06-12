@@ -48,3 +48,12 @@ Projet pour voir MySQL/MariaDB
 2. (désolé) Faire une requête qui va afficher les persons qui savent faire du Git et qui ont une address à Grenoble (on va donc avoir 3 LEFT JOIN, pasque pourquoi pas)
 3. En se basant sur la requête d'avant, afficher les labels des skills connus des persons qui ont une address à grenoble (distinct ?)
 
+### Aggrégations
+
+#### Requêtes avec GROUP BY
+1. Faire une requête pour afficher l'âge moyen des persones qui ont le même prénom
+2. Faire une requête pour afficher l'âge de la plus vieille personne de chaque famille
+3. Faire une requête avec jointure pour afficher les personnes et le nombre d'adresses que chacune possède
+4. En se basant sur la requête précédente, faire en sorte de n'afficher que les personnes qui ont 2 adresses ou plus (il faudra faire cette condition avec un HAVING plutôt qu'un WHERE)
+5. Faire une requête avec double jointure pour afficher les personnes et la liste de leurs skills concaténés dans une même chaîne de caractère
+6. Faire une requête avec double jointure pour afficher les skills, combien de personne possède chaque skill et l'âge moyen et maximum des personnes qui les ont
