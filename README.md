@@ -58,3 +58,8 @@ Projet pour voir MySQL/MariaDB
 5. Faire une requête avec double jointures pour afficher les personnes et la liste de leurs skills concaténés dans une même chaîne de caractère
 6. Faire une requête avec double jointures pour afficher les skills, combien de personne possède chaque skill et l'âge moyen et maximum des personnes qui les ont
 **Bonus** Faire un classement des villes avec le plus de skills pratiqués (et quel est le skill le plus pratiqué ? Pas certain de si c'est possible en une seule requête ça) 
+
+### Modification
+1. Dans un fichier à part qu'on va appeler modif-table.sql, utiliser un ALTER TABLE pour rajouter une nouvelle colonne birthdate de type DATE dans la person
+2. Faire une requête update pour essayer de remplir la colonne birthdate des gens existants en mettant une birthdate par défaut au 1er janvier et comme année, l'année de maintenant moins l'age ?
+3. Faire un autre alter table pour supprimer la colonne age
