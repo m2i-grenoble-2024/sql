@@ -60,6 +60,13 @@ Projet pour voir MySQL/MariaDB
 **Bonus** Faire un classement des villes avec le plus de skills pratiqués (et quel est le skill le plus pratiqué ? Pas certain de si c'est possible en une seule requête ça) 
 
 ### Modification
+
 1. Dans un fichier à part qu'on va appeler modif-table.sql, utiliser un ALTER TABLE pour rajouter une nouvelle colonne birthdate de type DATE dans la person
-2. Faire une requête update pour essayer de remplir la colonne birthdate des gens existants en mettant une birthdate par défaut au 1er janvier et comme année, l'année de maintenant moins l'age ?
+2. Faire une requête update pour essayer de remplir la colonne birthdate des gens existants en mettant une birthdate par défaut au 1er janvier et comme année, l'année de maintenant moins l'age ? (il va falloir assigner comme birthdate l'année actuelle moins l'age, et la CONCAT à '-01-01')
 3. Faire un autre alter table pour supprimer la colonne age
+
+
+### Mise en Pratique (commande de sandwich)
+![Diagramme de use case](san2ich-use-case.png)
+
+À partir de ce diagramme de use case, créer le diagramme d'entité pour lister les choses qui devront persister
