@@ -8,6 +8,11 @@ CREATE TABLE person (
     first_name VARCHAR(128) NOT NULL,
     age INT
 );
+-- Ici, comme l'address a une relation Many To One avec person, on lui indique une
+-- colonne person_id qui indiquera l'id de la person à qui appartient l'address en question.
+-- Pour ajouter des contraintes, on la déclare sous forme de clé étrangère, ce qui fait qu'on
+-- ne pourra pas assigner une address à un id de personne qui n'existe pas et que lorsqu'on
+-- supprime une person on pourra choisir le comportement à adopter sur les address qui appartenaient à cette person
 CREATE TABLE address(
     id INT PRIMARY KEY AUTO_INCREMENT,
     street VARCHAR(255),
@@ -23,7 +28,11 @@ CREATE TABLE skill(
     id INT PRIMARY KEY AUTO_INCREMENT,
     label VARCHAR(128) NOT NULL
 );
-
+-- Ici nous avons une relation Many To Many entre person et skill, on doit donc créer
+-- une table de jointure dont le seul but sera de faire la correspondance entre les 
+-- persons et les skills. Elle ne contiendra que des clés étrangères (celles des 2 table à relier)
+-- et on fait le choix de faire une clé primaire composite qui sera la concaténation des 2 clés étrangères
+-- on aurait aussi pu rajouter un id auto_increment, mais je trouve ça moins joli
 CREATE TABLE person_skill(
     person_id INT,
     skill_id INT,

@@ -58,7 +58,9 @@ SELECT person.name FROM person LEFT JOIN address ON person.id=address.person_id
 SELECT person.* FROM person LEFT JOIN address ON person.id=address.person_id 
  WHERE CONCAT(person.name, person.first_name, address.street, address.city) LIKE '%on%';
 
-
+-- Pour faire une requête qui concerne à la fois les personnes et leur skills, on doit
+-- faire 2 jointures, une entre la première table et la table de jointure, et une autre
+-- entre la table de jointure et la deuxième table (car les 2 tables ne se connaissent pas directement)
 SELECT person.* FROM person
 LEFT JOIN person_skill ON person.id=person_skill.person_id
 LEFT JOIN skill ON skill.id=person_skill.skill_id
@@ -72,7 +74,11 @@ LEFT JOIN skill ON skill.id=person_skill.skill_id
 LEFT JOIN address ON person.id=address.person_id
 WHERE skill.label='Git' AND address.city='Grenoble';
 
--- commentaire
+-- Ici, on va chercher les skills qui sont pratiqués dans la ville de Grenoble,
+-- comme ils sont liés à des personnes, il peut y avoir des répétitions, donc on utilise
+-- le DISTINCT pour ne pas répéter un même skill, et on utilise un INNER JOIN pour ne
+-- pas aller chercher les personnes qui n'ont pas de skill (sinon une des valeurs affichées
+-- serait NULL pour représenter les personnes sans skill à Grenoble)
 SELECT DISTINCT skill.label FROM person
 INNER JOIN person_skill ON person.id=person_skill.person_id
 LEFT JOIN skill ON skill.id=person_skill.skill_id

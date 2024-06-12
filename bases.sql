@@ -51,6 +51,12 @@ DELETE FROM person WHERE id=2;
 
 -- Exemple de requête avec jointure où on va chercher toutes les peronnes et leur
 -- adresses pour celles qui en ont.
+-- Les types de jointures principales : LEFT, RIGHT, INNER
+-- Dans le cas suivant LEFT va chercher toutes les personnes même celles sans adresses mais ne récupère pas les adresses sans personnes
+-- RIGHT ferait l'inverse, récupérer toutes les adresses même celles sans personnes mais pas les personnes sans adresses
+-- INNER irait chercher l'intersection des deux donc juste les personnes qui ont des adresses et les adresses qui ont des personnes
+-- Le ON sert à indiquer quel est le point commun entre les deux tables (quelle colonne représente la même valeur)
+-- La plupart du temps on aura la clé primaire d'une des tables et la clé étrangère correspondante dans l'autre
 SELECT * FROM person LEFT JOIN address ON person.id=address.person_id;
 
 -- Group by permet d'aggréger (de regrouper) des valeurs ensemble en se basant 
