@@ -91,11 +91,30 @@ SELECT first_name, COUNT(*),AVG(age) FROM person GROUP BY first_name;
 
 SELECT MAX(age), name FROM person GROUP BY name;
 
-SELECT person.*, COUNT(*) AS address_count FROM person 
+SELECT person.*, COUNT(address.id) AS address_count FROM person 
 LEFT JOIN address ON person.id=address.person_id
 GROUP BY person.id;
 
-SELECT person.*, COUNT(*) AS address_count FROM person 
+SELECT person.*, COUNT(address.id) AS address_count FROM person 
 LEFT JOIN address ON person.id=address.person_id
 GROUP BY person.id
 HAVING address_count >= 2;
+
+SELECT person.*, GROUP_CONCAT(label) AS skills FROM person
+LEFT JOIN person_skill ON person_skill.person_id=person.id
+LEFT JOIN skill ON person_skill.skill_id=skill.id
+GROUP BY person.id;
+
+SELECT skill.*, COUNT(person.id) as skill_users, MAX(person.age) AS oldest_user, AVG(person.age) AS avg_user_age FROM skill 
+LEFT JOIN person_skill ON person_skill.person_id=skill.id
+LEFT JOIN person ON person_skill.skill_id=person.id
+GROUP BY skill.id;
+
+SELECT address.city, COUNT(skill.id) FROM address 
+LEFT JOIN person ON person.id=address.person_id
+LEFT JOIN person_skill ON person_skill.person_id=person.id
+LEFT JOIN skill ON person_skill.skill_id=skill.id
+GROUP BY address.city ORDER BY COUNT(skill.id) DESC;
+
+
+DELETE FROM person WHERE id=1;

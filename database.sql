@@ -18,7 +18,7 @@ CREATE TABLE address(
     street VARCHAR(255),
     city VARCHAR(255),
     zip_code VARCHAR(20),
-    person_id INT REFERENCES person(id)
+    person_id INT REFERENCES person(id) ON DELETE SET NULL
     -- FOREIGN KEY person_id REFERENCES person(id) -- On peut aussi déclarer la FK à part
 );
 
@@ -37,8 +37,8 @@ CREATE TABLE person_skill(
     person_id INT,
     skill_id INT,
     PRIMARY KEY (person_id,skill_id),
-    FOREIGN KEY (person_id) REFERENCES person(id),
-    FOREIGN KEY (skill_id) REFERENCES skill(id)
+    FOREIGN KEY (person_id) REFERENCES person(id) ON DELETE CASCADE,
+    FOREIGN KEY (skill_id) REFERENCES skill(id) ON DELETE CASCADE
 );
 
 INSERT INTO person (name,first_name,age) VALUES
