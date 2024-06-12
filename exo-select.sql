@@ -84,3 +84,18 @@ INNER JOIN person_skill ON person.id=person_skill.person_id
 LEFT JOIN skill ON skill.id=person_skill.skill_id
 LEFT JOIN address ON person.id=address.person_id
 WHERE address.city='Grenoble';
+
+
+
+SELECT first_name, COUNT(*),AVG(age) FROM person GROUP BY first_name;
+
+SELECT MAX(age), name FROM person GROUP BY name;
+
+SELECT person.*, COUNT(*) AS address_count FROM person 
+LEFT JOIN address ON person.id=address.person_id
+GROUP BY person.id;
+
+SELECT person.*, COUNT(*) AS address_count FROM person 
+LEFT JOIN address ON person.id=address.person_id
+GROUP BY person.id
+HAVING address_count >= 2;

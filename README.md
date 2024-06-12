@@ -54,6 +54,7 @@ Projet pour voir MySQL/MariaDB
 1. Faire une requête pour afficher l'âge moyen des persones qui ont le même prénom
 2. Faire une requête pour afficher l'âge de la plus vieille personne de chaque famille
 3. Faire une requête avec jointure pour afficher les personnes et le nombre d'adresses que chacune possède
-4. En se basant sur la requête précédente, faire en sorte de n'afficher que les personnes qui ont 2 adresses ou plus (il faudra faire cette condition avec un HAVING plutôt qu'un WHERE)
-5. Faire une requête avec double jointure pour afficher les personnes et la liste de leurs skills concaténés dans une même chaîne de caractère
-6. Faire une requête avec double jointure pour afficher les skills, combien de personne possède chaque skill et l'âge moyen et maximum des personnes qui les ont
+4. En se basant sur la requête précédente, faire en sorte de n'afficher que les personnes qui ont 2 adresses ou plus (il faudra faire cette condition avec un HAVING après le GROUP BY plutôt qu'un WHERE)
+5. Faire une requête avec double jointures pour afficher les personnes et la liste de leurs skills concaténés dans une même chaîne de caractère
+6. Faire une requête avec double jointures pour afficher les skills, combien de personne possède chaque skill et l'âge moyen et maximum des personnes qui les ont
+**Bonus** Faire un classement des villes avec le plus de skills pratiqués (et quel est le skill le plus pratiqué ? Pas certain de si c'est possible en une seule requête ça) 
