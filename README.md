@@ -84,3 +84,13 @@ Projet pour voir MySQL/MariaDB
 
 #### Identifier les différentes requêtes SQL
 À l'aide de [la maquette](san2ich.pdf), essayer d'identifier les différentes requêtes SQL qui seront exécutées pour pouvoir afficher les informations nécessaires et au moment où on valide certains écrans
+
+**Indices**
+(Certaines des choses que je vais dire là sont pas forcément faites exactement au moment où je dis qu'elles sont faites, mais elles seront faite à un moment quand même)
+* Page 1 : Quand je commence ma commande, j'ajoute une nouvelle entrée dans la table commande
+* Page 2 : Pour afficher ma commande en cours, je fais une requête pour lister les sandwichs d'une commande donnée. Quand je add un sandwich, j'ajoute une nouvelle entrée dans la table sandwich liée à la commande en cours. 
+* Page 3 : Pour afficher les pains, je fais une requête sur les ingrédients de type pain. Quand j'ai choisis un pain, je l'ajoute en ingrédient de mon sandwich en cours. (Bonus, j'affiche seulement ceux qui sont en stock. En vrai on ferait sans doute un affichage différencié côté front, mais c'est histoire de faire du SQL)
+* Page 4, 5 et 6 : Même chose que pour les pains, mais pour les protéines, sauces et les garnitures
+* Page 7 : Pour afficher le récap d'un sandwich, je vais chercher le sandwich et tous ses ingrédients associés (avec jointures donc). Pour afficher le total, je récupère les ingrédients de mon sandwich et j'additionne les prix ensemble (group by)
+* Page 8 : À nouveau récap des sandwich, mais pour toute la commande, donc même requête qu'au dessus avec la commande en plus. Et pourquoi pas calculer le prix total de la commande avec un GROUP BY. Quand je valide la commande, je mets son status en attente et l'heure de la commande à maintenant. J'envoie aussi mes infos de livraison que j'ajoute donc en nouvelle entrée de la table correspondante.
+* Page 9 : Pour afficher la commande en cours je fais une requête pour aller chercher sandwich et ingrédients d'une commande données, je peux rajouter une colonne avec un calcul pour afficher le temps écoulé depuis la commande. Pour afficher les commandes à venir, je récupère commande et sandwich et je regroupe pour savoir combien de sandwich je devrai faire par commande.
