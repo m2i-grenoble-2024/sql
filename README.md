@@ -81,3 +81,6 @@ Projet pour voir MySQL/MariaDB
 2. Créer un fichier database-sandwich.sql lié à cette base de données
 3. Dans ce fichier, faire les DROP et CREATE TABLE pour chacune des entités avec leurs colonnes, clés étrangères, constraints etc.
 4. Ajouter des INSERT INTO pour avoir des données de tests : une liste d'ingrédients de différents types (bread, protein, sauce, garnish), 3-4 commandes avec différents status (delivered, awaiting, in progress), 1 ou 2 sandwich par commande et donc des liens avec des ingrédients pour chaque sandwich
+
+#### Identifier les différentes requêtes SQL
+À l'aide de [la maquette](san2ich.pdf), essayer d'identifier les différentes requêtes SQL qui seront exécutées pour pouvoir afficher les informations nécessaires et au moment où on valide certains écrans
