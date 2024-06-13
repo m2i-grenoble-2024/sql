@@ -87,7 +87,7 @@ WHERE address.city='Grenoble';
 
 
 
-SELECT first_name, COUNT(*),AVG(age) FROM person GROUP BY first_name;
+SELECT first_name, COUNT(id),AVG(age) FROM person GROUP BY first_name;
 
 SELECT MAX(age), name FROM person GROUP BY name;
 
