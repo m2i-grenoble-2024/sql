@@ -36,3 +36,17 @@ INNER JOIN sandwich_ingredient ON sandwich.id=sandwich_ingredient.sandwich_id
 INNER JOIN ingredient ON sandwich_ingredient.ingredient_id=ingredient.id
 WHERE commande.id=2
 GROUP BY sandwich.id;
+
+
+-- Afficher commande et depuis quand elle a été passée
+SELECT *, TIMESTAMPDIFF(MINUTE, NOW(), order_date) FROM commande WHERE id=5;
+
+-- Afficher l'heure des commande en attente et le nombre de sandwich contenus dans chaque commande
+SELECT TIME(order_date) AS order_time, SUM(sandwich.quantity) AS sandwich_nb FROM commande 
+INNER JOIN sandwich ON sandwich.commande_id=commande.id
+WHERE status='awaiting'
+GROUP BY commande.id;
+
+
+-- Mettre à jour le status d'une commande et modifier son order_date
+UPDATE commande SET status='delivered', order_date=NOW() WHERE id=4;
