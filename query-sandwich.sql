@@ -26,5 +26,13 @@ WHERE sandwich.id=5;
 SELECT *, SUM(ingredient.price) AS total FROM sandwich
 INNER JOIN sandwich_ingredient ON sandwich.id=sandwich_ingredient.sandwich_id
 INNER JOIN ingredient ON sandwich_ingredient.ingredient_id=ingredient.id
-WHERE sandwich.id=5
+WHERE sandwich.id=2
+GROUP BY sandwich.id;
+
+-- Aller chercher une commande avec ses sandwich et leurs ingrédients et le total de chaque sandwich
+SELECT commande.*,GROUP_CONCAT(ingredient.name),SUM(ingredient.price) AS total FROM commande
+INNER JOIN sandwich ON commande.id=sandwich.commande_id
+INNER JOIN sandwich_ingredient ON sandwich.id=sandwich_ingredient.sandwich_id
+INNER JOIN ingredient ON sandwich_ingredient.ingredient_id=ingredient.id
+WHERE commande.id=2
 GROUP BY sandwich.id;

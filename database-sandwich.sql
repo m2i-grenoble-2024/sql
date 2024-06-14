@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS ingredient;
 CREATE TABLE ingredient(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(128) NOT NULL,
-    price FLOAT NOT NULL,
+    price DOUBLE NOT NULL,
     type VARCHAR(128) NOT NULL,
     stock INT
 );
@@ -17,7 +17,7 @@ CREATE TABLE ingredient(
 CREATE TABLE commande (
     id INT PRIMARY KEY AUTO_INCREMENT,
     order_date DATETIME NOT NULL,
-    total FLOAT,
+    total DOUBLE,
     status VARCHAR(128) NOT NULL
 );
 
