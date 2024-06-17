@@ -57,7 +57,7 @@ CREATE TABLE amende(
 CREATE TABLE auteur_livre(
     id_livre INT,
     id_auteur INT,
-    PRIMARY(id_livre,id_auteur),
+    PRIMARY KEY(id_livre,id_auteur),
     FOREIGN KEY (id_auteur)  REFERENCES auteur(id),
     FOREIGN KEY (id_livre)  REFERENCES livre(id)
 );
