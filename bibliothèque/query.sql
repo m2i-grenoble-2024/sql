@@ -9,6 +9,10 @@ LEFT JOIN auteur_livre ON livre.id=auteur_livre.id_livre
 LEFT JOIN auteur ON auteur_livre.id_auteur=auteur.id
 WHERE CONCAT(livre.titre,livre.description,livre.genre,auteur.nom,auteur.prenom) LIKE '%es%';
 
--- Faire une requête pour récupérer la liste des adhérents
+-- Faire une requête pour récupérer la liste des adhérent⋅es
 
 -- Faire une requête pour récupérer la liste des amendes non payées et le nom/prénom de l'utilisateur⋅ice à qui est assignée l'amende
+
+-- Faire une requête pour récupérer les livres publiés depuis 1990
+
+-- Faire une requête pour récupérer la liste des adhérent, leur nombre d'emprunt en cours (bonus, mettre un flag true/false si la personne a une/des amendes non payées)
