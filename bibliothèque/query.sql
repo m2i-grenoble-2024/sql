@@ -24,3 +24,13 @@ SELECT utilisateur.*, COUNT(CASE WHEN date_retour_reelle IS NULL AND emprunt.id 
 LEFT JOIN emprunt ON utilisateur.id=emprunt.id_utilisateur
 LEFT JOIN amende ON amende.id_utilisateur=utilisateur.id
 GROUP BY utilisateur.id;
+
+
+-- récupérer les utilisateur⋅ices et leurs emprunts si y en ont
+SELECT * FROM utilisateur
+LEFT JOIN emprunt ON emprunt.id_utilisateur=utilisateur.id;
+
+-- récupérer tous les emprunts ainsi que le nom de la personne qui emprunte et le titre du livre emprunté
+SELECT emprunt.*, CONCAT(utilisateur.nom,' ', utilisateur.prenom) AS nom_complet, livre.titre FROM emprunt
+LEFT JOIN utilisateur ON emprunt.id_utilisateur=utilisateur.id
+LEFT JOIN livre ON emprunt.id_livre=livre.id; 
