@@ -67,13 +67,13 @@ Projet pour voir MySQL/MariaDB
 
 
 ### Mise en Pratique (commande de sandwich)
-![Diagramme de use case](san2ich-use-case.png)
+![Diagramme de use case](sandwich/san2ich-use-case.png)
 
 #### Conception
 À partir de ce diagramme de use case, créer le diagramme d'entité pour lister les choses qui devront persister
 
 #### Création des tables
-![Diagramme de classes](san2ich-class.png)
+![Diagramme de classes](sandwich/san2ich-class.png)
 
 À partir de ce diagramme, identifier où seront les clés étrangères et tables de jointures puis :
 
@@ -83,7 +83,7 @@ Projet pour voir MySQL/MariaDB
 4. Ajouter des INSERT INTO pour avoir des données de tests : une liste d'ingrédients de différents types (bread, protein, sauce, garnish), 3-4 commandes avec différents status (delivered, awaiting, in progress), 1 ou 2 sandwich par commande et donc des liens avec des ingrédients pour chaque sandwich
 
 #### Identifier les différentes requêtes SQL
-À l'aide de [la maquette](san2ich.pdf), essayer d'identifier les différentes requêtes SQL qui seront exécutées pour pouvoir afficher les informations nécessaires et au moment où on valide certains écrans
+À l'aide de [la maquette](sandwich/san2ich.pdf), essayer d'identifier les différentes requêtes SQL qui seront exécutées pour pouvoir afficher les informations nécessaires et au moment où on valide certains écrans
 
 **Indices**
 (Certaines des choses que je vais dire là sont pas forcément faites exactement au moment où je dis qu'elles sont faites, mais elles seront faite à un moment quand même)
