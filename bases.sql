@@ -65,3 +65,17 @@ SELECT * FROM person LEFT JOIN address ON person.id=address.person_id;
 -- question et de compter combien de ligne contient l'aggrégat pour chaque nom 
 -- (donc en gros combien de personnes ont le même nom dans la table personne)
 SELECT name, COUNT(*) AS nb_of_person FROM person GROUP BY name;
+
+-- Afficher les users et leurs droits
+SELECT * FROM mysql.user;
+
+-- Créer un nouveau user test sans droit qui ne peut se connecter que depuis le même pc que la bdd avec comme mot de passe 1234
+CREATE USER 'test'@'localhost' IDENTIFIED BY '1234';
+-- Donner tous les droits sur la base de données dam_first au user test
+GRANT ALL PRIVILEGES ON dam_first.* TO 'test'@'localhost';
+
+-- Donner les droits de faire des SELECT et des INSERT au user test spécifiquement sur la bdd dam_first, sur toutes ses tables
+-- GRANT SELECT,INSERT ON dam_first.* TO 'test'@'localhost';
+
+-- Appliquer les privileges qu'on a défini
+FLUSH PRIVILEGES;

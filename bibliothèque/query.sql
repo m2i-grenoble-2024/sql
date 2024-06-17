@@ -34,3 +34,10 @@ LEFT JOIN emprunt ON emprunt.id_utilisateur=utilisateur.id;
 SELECT emprunt.*, CONCAT(utilisateur.nom,' ', utilisateur.prenom) AS nom_complet, livre.titre FROM emprunt
 LEFT JOIN utilisateur ON emprunt.id_utilisateur=utilisateur.id
 LEFT JOIN livre ON emprunt.id_livre=livre.id; 
+
+-- Commentaire à faire
+START TRANSACTION;
+INSERT INTO emprunt (date_emprunt,jours_autorises,id_livre,id_utilisateur, date_retour_reelle) VALUES
+(NOW(), 30, 4, 1, NULL);
+UPDATE livre SET disponibl=FALSE WHERE id=4;
+COMMIT;
