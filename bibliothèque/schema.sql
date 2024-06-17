@@ -1,3 +1,10 @@
+DROP TABLE IF EXISTS auteur_livre;
+DROP TABLE IF EXISTS amende;
+DROP TABLE IF EXISTS emprunt;
+DROP TABLE IF EXISTS livre;
+DROP TABLE IF EXISTS auteur;
+DROP TABLE IF EXISTS utilisateur;
+
 CREATE TABLE utilisateur(
     id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -28,7 +35,7 @@ CREATE TABLE livre(
 CREATE TABLE emprunt(
     id INT PRIMARY KEY AUTO_INCREMENT,
     date_emprunt DATE NOT NULL,
-    date_retour DATE,
+    date_retour_reelle DATE,
     jours_autorises INT NOT NULL,
     id_utilisateur INT NOT NULL,
     id_livre INT NOT NULL,
@@ -45,4 +52,12 @@ CREATE TABLE amende(
     raison TEXT NOT NULL,
     id_utilisateur INT NOT NULL,
     FOREIGN KEY (id_utilisateur)  REFERENCES utilisateur(id)
+);
+
+CREATE TABLE auteur_livre(
+    id_livre INT,
+    id_auteur INT,
+    PRIMARY(id_livre,id_auteur),
+    FOREIGN KEY (id_auteur)  REFERENCES auteur(id),
+    FOREIGN KEY (id_livre)  REFERENCES livre(id)
 );
