@@ -69,7 +69,7 @@ SELECT name, COUNT(*) AS nb_of_person FROM person GROUP BY name;
 -- Afficher les users et leurs droits
 SELECT * FROM mysql.user;
 
--- Créer un nouveau user test sans droit qui ne peut se connecter que depuis le même pc que la bdd avec comme mot de passe 1234
+-- Créer un nouveau user 'test' sans droit qui ne peut se connecter que depuis le même pc que la bdd avec comme mot de passe 1234
 CREATE USER 'test'@'localhost' IDENTIFIED BY '1234';
 -- Donner tous les droits sur la base de données dam_first au user test
 GRANT ALL PRIVILEGES ON dam_first.* TO 'test'@'localhost';
@@ -79,3 +79,7 @@ GRANT ALL PRIVILEGES ON dam_first.* TO 'test'@'localhost';
 
 -- Appliquer les privileges qu'on a défini
 FLUSH PRIVILEGES;
+
+-- Créer un user monuser avec 1234 comme mot de passe et lui donner tous les droits
+-- sur toutes les bdd et tables
+GRANT ALL PRIVILEGES ON *.* TO 'monuser'@'%' IDENTIFIED BY '1234';

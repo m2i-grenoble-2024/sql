@@ -94,3 +94,11 @@ Projet pour voir MySQL/MariaDB
 * Page 7 : Pour afficher le récap d'un sandwich, je vais chercher le sandwich et tous ses ingrédients associés (avec jointures donc). Pour afficher le total, je récupère les ingrédients de mon sandwich et j'additionne les prix ensemble (group by)
 * Page 8 : À nouveau récap des sandwich, mais pour toute la commande, donc même requête qu'au dessus avec la commande en plus. Et pourquoi pas calculer le prix total de la commande avec un GROUP BY. Quand je valide la commande, je mets son status en attente et l'heure de la commande à maintenant. J'envoie aussi mes infos de livraison que j'ajoute donc en nouvelle entrée de la table correspondante.
 * Page 9 : Pour afficher la commande en cours je fais une requête pour aller chercher sandwich et ingrédients d'une commande données, je peux rajouter une colonne avec un calcul pour afficher le temps écoulé depuis la commande. Pour afficher les commandes à venir, je récupère commande et sandwich et je regroupe pour savoir combien de sandwich je devrai faire par commande.
+
+
+### Révision (picture)
+![use case diagram](pictures/picture-usecase.png)
+
+À partir de ce diagramme de use case, faire un diagramme de classe pour identifier les entités et leurs relations
+
+* Ensuite créer une base de donnée et un fichier schema.sql avec les create table en faisant attention aux clés étrangères/tables de jointures etc.
