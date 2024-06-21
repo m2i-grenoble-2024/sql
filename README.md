@@ -102,3 +102,9 @@ Projet pour voir MySQL/MariaDB
 À partir de ce diagramme de use case, faire un diagramme de classe pour identifier les entités et leurs relations
 
 * Ensuite créer une base de donnée et un fichier schema.sql avec les create table en faisant attention aux clés étrangères/tables de jointures etc.
+* Insérer les data nécessaires pour identifier quelques requêtes de tests pour les fonctionnalités suivantes :
+    * List picture with likes
+    * Show one picture with comments
+    * Show one account with pictures
+    * Subscribe to an account
+    * Show personal feed (pictures from the subscribed accounts, by date)
